@@ -1,0 +1,29 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Flower">
+        <xs:complexType>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="Name" type="xs:string" use="required"/>
+            <xs:attribute name="Origin" type="xs:string" use="required"/>
+            <xs:attribute name="Multiplying" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Листям"/>
+                    <xs:enumeration value="Живцями"/>
+                    <xs:enumeration value="Насінням"/>
+
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+            <xs:attribute name="Soil" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Підзолистий"/>
+                        <xs:enumeration value="Грунтовий"/>
+                        <xs:enumeration value="Дерново-підзолистий"/>
+
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
