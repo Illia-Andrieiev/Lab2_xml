@@ -7,15 +7,30 @@
                         <xs:sequence>
                             <xs:element name="Stem_Color" type="xs:string"/>
                             <xs:element name="Leaf_Color" type="xs:string"/>
+                            <xs:element name="Average_Length">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:double">
+                                        <xs:minInclusive value="0"/>
+                                        <xs:maxInclusive value="1000"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
                 <xs:element name="Growing_Tips">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="Temperature" type="xs:integer"/>
+                            <xs:element name="Temperature" type="xs:float"/>
                             <xs:element name="Photophilous" type="xs:boolean"/>
-                            <xs:element name="Watering" type="xs:integer"/>
+                            <xs:element name="Watering">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:double">
+                                        <xs:minInclusive value="0"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="Growth_Time" type="xs:positiveInteger"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
