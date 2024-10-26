@@ -8,7 +8,6 @@
 
 package generated;
 
-import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -340,7 +339,7 @@ public class Flower {
         protected double watering;
         @XmlElement(name = "Growth_Time", required = true)
         @XmlSchemaType(name = "positiveInteger")
-        protected BigInteger growthTime;
+        protected int growthTime;
 
         /**
          * Gets the value of the temperature property.
@@ -395,10 +394,10 @@ public class Flower {
          * 
          * @return
          *     possible object is
-         *     {@link BigInteger }
+         *     {@link Integer }
          *     
          */
-        public BigInteger getGrowthTime() {
+        public Integer getGrowthTime() {
             return growthTime;
         }
 
@@ -407,10 +406,10 @@ public class Flower {
          * 
          * @param value
          *     allowed object is
-         *     {@link BigInteger }
+         *     {@link Integer }
          *     
          */
-        public void setGrowthTime(BigInteger value) {
+        public void setGrowthTime(int value) {
             this.growthTime = value;
         }
 
@@ -526,4 +525,28 @@ public class Flower {
 
     }
 
+    public void print() {
+        System.out.println("ID: " + id);
+        System.out.println("Name: " + name);
+        System.out.println("Origin: " + origin);
+        System.out.println("Multiplying: " + multiplying);
+        System.out.println("Soil: " + soil);
+
+        if (visualParameters != null) {
+            System.out.println("Visual Parameters:");
+            System.out.println("  Stem Color: " + visualParameters.getStemColor());
+            System.out.println("  Leaf Color: " + visualParameters.getLeafColor());
+            System.out.println("  Average Length: " + visualParameters.getAverageLength());
+        }
+
+        if (growingTips != null) {
+            System.out.println("Growing Tips:");
+            System.out.println("  Temperature: " + growingTips.getTemperature());
+            System.out.println("  Photophilous: " + growingTips.isPhotophilous());
+            System.out.println("  Watering: " + growingTips.getWatering());
+            System.out.println("  Growth Time: " + growingTips.getGrowthTime());
+        }
+
+
+    }
 }
