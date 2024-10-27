@@ -12,6 +12,7 @@ target/
 *.iml
 *.ipr
 *.xml
+!/src/main/**/flowers/flowers.xml
 
 ### Eclipse ###
 .apt_generated

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44882a83-0182-47cd-b19c-58f223726086" name="Changes" comment="DOMFlowerParser class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/parsers/StAXFlowerParser.java" afterDir="false" />
+    <list default="true" id="44882a83-0182-47cd-b19c-58f223726086" name="Changes" comment="StAXFlowerParser class, extended documentation">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DOMFlowerParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/parsers/DOMFlowerParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SAXFlowerParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/parsers/SAXFlowerParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,9 @@
     &quot;accountId&quot;: &quot;16f5285a-018c-44c1-b484-78aa5df1d922&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -201,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730033779849</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="StAXFlowerParser class, extended documentation">
+      <option name="closed" value="true" />
+      <created>1730034987470</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1730034987470</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -213,6 +222,7 @@
     <MESSAGE value="print method for Flower. SAX flower parser class" />
     <MESSAGE value="Updated SAX parser and XML-schema" />
     <MESSAGE value="DOMFlowerParser class" />
-    <option name="LAST_COMMIT_MESSAGE" value="DOMFlowerParser class" />
+    <MESSAGE value="StAXFlowerParser class, extended documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="StAXFlowerParser class, extended documentation" />
   </component>
 </project>
