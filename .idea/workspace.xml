@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44882a83-0182-47cd-b19c-58f223726086" name="Changes" comment="Updated SAX parser and XML-schema">
+    <list default="true" id="44882a83-0182-47cd-b19c-58f223726086" name="Changes" comment="DOMFlowerParser class">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/parsers/StAXFlowerParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DOMFlowerParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/parsers/DOMFlowerParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SAXFlowerParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/parsers/SAXFlowerParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,11 +74,11 @@
   </component>
   <component name="RunManager" selected="Application.DOMFlowerParser">
     <configuration name="DOMFlowerParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.DOMFlowerParser" />
+      <option name="MAIN_CLASS_NAME" value="org.example.parsers.DOMFlowerParser" />
       <module name="Lab2_xml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.parsers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,7 +91,7 @@
       <module name="Lab2_xml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.parsers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,11 +100,11 @@
       </method>
     </configuration>
     <configuration name="SAXFlowerParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.SAXFlowerParser" />
+      <option name="MAIN_CLASS_NAME" value="org.example.parsers.SAXFlowerParser" />
       <module name="Lab2_xml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.parsers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -182,7 +185,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730030866332</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="DOMFlowerParser class">
+      <option name="closed" value="true" />
+      <created>1730033769717</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730033769717</updated>
+    </task>
+    <task id="LOCAL-00009" summary="DOMFlowerParser class">
+      <option name="closed" value="true" />
+      <created>1730033779849</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730033779849</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -193,6 +212,7 @@
     <MESSAGE value="generated Flower class" />
     <MESSAGE value="print method for Flower. SAX flower parser class" />
     <MESSAGE value="Updated SAX parser and XML-schema" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated SAX parser and XML-schema" />
+    <MESSAGE value="DOMFlowerParser class" />
+    <option name="LAST_COMMIT_MESSAGE" value="DOMFlowerParser class" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.parsers;
 // import org.apache.tools.ant.types.resources.selectors.None;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
@@ -23,16 +23,19 @@ public class SAXFlowerParser extends DefaultHandler {
     private Flower.GrowingTips growingTips;
     private StringBuilder content;
 
+    // Returns the list of Flower objects
     public List<Flower> getFlowers() {
         return flowers;
     }
 
+    // Called when the document starts
     @Override
-    public void startDocument(){
+    public void startDocument() {
         flowers = new ArrayList<>();
         content = new StringBuilder();
     }
 
+    // Called when an element starts
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) {
         switch (qName) {
@@ -53,6 +56,7 @@ public class SAXFlowerParser extends DefaultHandler {
         }
     }
 
+    // Called when an element ends
     @Override
     public void endElement(String uri, String localName, String qName) {
         switch (qName) {
@@ -84,18 +88,20 @@ public class SAXFlowerParser extends DefaultHandler {
                 growingTips.setWatering(Double.parseDouble(content.toString().trim()));
                 break;
             case "Growth_Time":
-                growingTips.setGrowthTime((Integer.parseInt(content.toString().trim())));
+                growingTips.setGrowthTime(Integer.parseInt(content.toString().trim()));
                 break;
         }
-        content.setLength(0);
+        content.setLength(0); // Clear the content buffer
     }
 
+    // Called when characters are encountered within an element
     @Override
-    public void characters(char[] ch, int start, int length){
+    public void characters(char[] ch, int start, int length) {
         content.append(ch, start, length);
     }
 
-    public static List<Flower> parseFile(String fileName){
+    // Parses an XML file that is validated by the greenhouse.xsd schema
+    public static List<Flower> parseFile(String fileName) {
         try {
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();
@@ -108,7 +114,9 @@ public class SAXFlowerParser extends DefaultHandler {
             return null;
         }
     }
-    public static List<Flower> parseDirectory(String directory){
+
+    // Parses a directory of XML documents that are validated by the greenhouse.xsd schema
+    public static List<Flower> parseDirectory(String directory) {
         List<Flower> flowers = new ArrayList<>();
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(Path.of(directory), "*.xml")) {
             for (Path file : stream) {
@@ -122,11 +130,11 @@ public class SAXFlowerParser extends DefaultHandler {
     }
 
     public static void main(String[] args) {
+        // Parse the directory of XML files and print each flower
         List<Flower> f = SAXFlowerParser.parseDirectory("src/main/java/org/example/xml_files/flowers");
-        for (Flower fl : f){
+        for (Flower fl : f) {
             fl.print();
             System.out.println("*********************");
         }
-
     }
 }

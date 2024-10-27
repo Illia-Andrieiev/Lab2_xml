@@ -1,4 +1,4 @@
-package org.example;
+package org.example.parsers;
 
 import org.w3c.dom.*;
 import javax.xml.parsers.DocumentBuilder;
@@ -19,7 +19,7 @@ public class DOMFlowerParser {
             System.out.println("**************************************");
         }
     }
-
+    // parse xml document, that validated by greenhouse.xsd schema
     public static List<Flower> parseFlowers(String filePath) {
         List<Flower> flowers = new ArrayList<>();
 
