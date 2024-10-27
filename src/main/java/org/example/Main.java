@@ -1,5 +1,8 @@
 package org.example;
 import generated.Flower;
+import org.example.parsers.SAXFlowerParser;
+
+import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -9,6 +12,21 @@ public class Main {
         String xmlSchema = "src/main/java/org/example/xml_files/greenhouse.xsd";
         boolean is_valid = XMLValidator.validationXML(xmlDocument,xmlSchema);
         System.out.println(is_valid);
+        if(is_valid){
+            List<Flower> flowers = SAXFlowerParser.parseFile(xmlDocument);
+            if(flowers == null)
+                return;
+            for (Flower flower : flowers) {
+                flower.print();
+                System.out.println("*********************");
+            }
+            System.out.println("////////////////////");
+            Flower.sortFlowers(flowers,"photophilous");
+            for (Flower flower : flowers) {
+                flower.print();
+                System.out.println("*********************");
+            }
+        }
     }
 }
 

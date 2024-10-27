@@ -18,6 +18,9 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 
 /**
@@ -124,6 +127,27 @@ public class Flower {
     protected String multiplying;
     @XmlAttribute(name = "Soil", required = true)
     protected String soil;
+
+    // Static method to sort a collection of Flowers by a specified field
+    public static void sortFlowers(List<Flower> flowers, String field) {
+        Comparator<Flower> comparator = switch (field.toLowerCase()) {
+            case "name" -> Comparator.comparing(Flower::getName);
+            case "origin" -> Comparator.comparing(Flower::getOrigin);
+            case "id" -> Comparator.comparing(Flower::getId);
+            case "multiplying" -> Comparator.comparing(Flower::getMultiplying);
+            case "soil" -> Comparator.comparing(Flower::getSoil);
+            case "temperature" -> Comparator.comparing(flower -> flower.getGrowingTips().getTemperature());
+            case "photophilous" -> Comparator.comparing(flower -> flower.getGrowingTips().isPhotophilous());
+            case "watering" -> Comparator.comparing(flower -> flower.getGrowingTips().getWatering());
+            case "growth_time" -> Comparator.comparing(flower -> flower.getGrowingTips().getGrowthTime());
+            case "stem_color" -> Comparator.comparing(flower -> flower.getVisualParameters().getStemColor());
+            case "leaf_color" -> Comparator.comparing(flower -> flower.getVisualParameters().getLeafColor());
+            case "average_length" -> Comparator.comparing(flower -> flower.getVisualParameters().getAverageLength());
+            default -> throw new IllegalArgumentException("Invalid field: " + field);
+        };
+
+        flowers.sort(comparator);
+    }
 
     /**
      * Gets the value of the visualParameters property.
