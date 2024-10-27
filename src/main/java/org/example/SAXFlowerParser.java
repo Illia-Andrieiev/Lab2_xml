@@ -1,7 +1,6 @@
 package org.example;
 // import org.apache.tools.ant.types.resources.selectors.None;
 import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import javax.xml.parsers.SAXParser;
@@ -15,7 +14,7 @@ import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.util.Objects;
 
 public class SAXFlowerParser extends DefaultHandler {
     private List<Flower> flowers;
@@ -29,15 +28,15 @@ public class SAXFlowerParser extends DefaultHandler {
     }
 
     @Override
-    public void startDocument() throws SAXException {
+    public void startDocument(){
         flowers = new ArrayList<>();
         content = new StringBuilder();
     }
 
     @Override
-    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+    public void startElement(String uri, String localName, String qName, Attributes attributes) {
         switch (qName) {
-            case "Flower":
+            case "Flowers":
                 currentFlower = new Flower();
                 currentFlower.setId(attributes.getValue("id"));
                 currentFlower.setName(attributes.getValue("Name"));
@@ -55,9 +54,9 @@ public class SAXFlowerParser extends DefaultHandler {
     }
 
     @Override
-    public void endElement(String uri, String localName, String qName) throws SAXException {
+    public void endElement(String uri, String localName, String qName) {
         switch (qName) {
-            case "Flower":
+            case "Flowers":
                 flowers.add(currentFlower);
                 break;
             case "Visual_Parameters":
@@ -92,19 +91,17 @@ public class SAXFlowerParser extends DefaultHandler {
     }
 
     @Override
-    public void characters(char[] ch, int start, int length) throws SAXException {
+    public void characters(char[] ch, int start, int length){
         content.append(ch, start, length);
     }
 
-    public static Flower parseFile(String fileName){
+    public static List<Flower> parseFile(String fileName){
         try {
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();
             SAXFlowerParser handler = new SAXFlowerParser();
             saxParser.parse(fileName, handler);
-
-            List<Flower> flowers = handler.getFlowers();
-            return flowers.getFirst();
+            return handler.getFlowers();
         } catch (Exception e) {
             String exMess = e.toString();
             System.out.println(exMess);
@@ -112,10 +109,10 @@ public class SAXFlowerParser extends DefaultHandler {
         }
     }
     public static List<Flower> parseDirectory(String directory){
-        List<Flower> flowers = new ArrayList<Flower>();
+        List<Flower> flowers = new ArrayList<>();
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(Path.of(directory), "*.xml")) {
             for (Path file : stream) {
-                flowers.add(parseFile(file.toString()));
+                flowers.addAll(Objects.requireNonNull(parseFile(file.toString())));
             }
         } catch (IOException e) {
             String exMess = e.toString();
