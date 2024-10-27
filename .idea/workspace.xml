@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44882a83-0182-47cd-b19c-58f223726086" name="Changes" comment="StAXFlowerParser class, extended documentation">
+    <list default="true" id="44882a83-0182-47cd-b19c-58f223726086" name="Changes" comment="Sorting flowers">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/XSLTTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/xml_files/transformation.xsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/generated/Flower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/generated/Flower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/xml_files/flowers/flowers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/xml_files/flowers/flowers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/XMLValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/XMLValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730035295595</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Sorting flowers">
+      <option name="closed" value="true" />
+      <created>1730037866788</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1730037866788</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -233,6 +242,7 @@
     <MESSAGE value="Updated SAX parser and XML-schema" />
     <MESSAGE value="DOMFlowerParser class" />
     <MESSAGE value="StAXFlowerParser class, extended documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="StAXFlowerParser class, extended documentation" />
+    <MESSAGE value="Sorting flowers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sorting flowers" />
   </component>
 </project>

@@ -27,7 +27,8 @@ public class XMLValidator {
             System.out.println("Validation error: " + e.getMessage());
             return false;
         } catch (Exception e) {
-            e.printStackTrace();
+            String exMess = e.toString();
+            System.out.println(exMess);
             return false;
         }
     }
