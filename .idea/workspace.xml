@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44882a83-0182-47cd-b19c-58f223726086" name="Changes" comment="XSLTTransformation class">
-      <change afterPath="$PROJECT_DIR$/src/test/java/generated/FlowerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DOMFlowerParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SAXFlowerParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/StAXFlowerParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/XMLValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/parsers/SAXFlowerParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/parsers/SAXFlowerParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/parsers/StAXFlowerParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/parsers/StAXFlowerParser.java" afterDir="false" />
+    <list default="true" id="44882a83-0182-47cd-b19c-58f223726086" name="Changes" comment="Unit tests, fixed bugs in StAXFlowerParser">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +17,7 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -295,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730049923814</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Unit tests, fixed bugs in StAXFlowerParser">
+      <option name="closed" value="true" />
+      <created>1730234240372</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1730234240372</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -310,6 +310,7 @@
     <MESSAGE value="StAXFlowerParser class, extended documentation" />
     <MESSAGE value="Sorting flowers" />
     <MESSAGE value="XSLTTransformation class" />
-    <option name="LAST_COMMIT_MESSAGE" value="XSLTTransformation class" />
+    <MESSAGE value="Unit tests, fixed bugs in StAXFlowerParser" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit tests, fixed bugs in StAXFlowerParser" />
   </component>
 </project>

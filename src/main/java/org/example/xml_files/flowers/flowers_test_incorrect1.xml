@@ -1,0 +1,42 @@
+<Flower>
+    <Flowers id="rose1" Origin="Україна" Multiplying="Живцями" Soil="Підзолистий">
+        <Visual_Parameters>
+            <Stem_Color>Зелений</Stem_Color>
+            <Leaf_Color>Червоний</Leaf_Color>
+            <Average_Length>30.0</Average_Length>
+        </Visual_Parameters>
+        <Growing_Tips>
+            <Temperature>15.0</Temperature>
+            <Photophilous>false</Photophilous>
+            <Watering>15000.0</Watering>
+            <Growth_Time>120</Growth_Time>
+        </Growing_Tips>
+    </Flowers>
+    <Flowers id="tulip1" Name="Тюльпан" Origin="Нідерланди" Multiplying="Насінням" Soil="Грунтовий">
+        <Visual_Parameters>
+            <Stem_Color>Зелений</Stem_Color>
+            <Leaf_Color>Зелений</Leaf_Color>
+            <Average_Length>40.0</Average_Length>
+        </Visual_Parameters>
+        <Growing_Tips>
+            <Temperature>10.0</Temperature>
+            <Photophilous>true</Photophilous>
+            <Watering>12000.0</Watering>
+            <Growth_Time>90</Growth_Time>
+        </Growing_Tips>
+    </Flowers>
+    <Flowers id="sunflower1" Name="Соняшник" Origin="США" Multiplying="Листям" Soil="Дерново-підзолистий">
+        <Visual_Parameters>
+            <Stem_Color>Жовтий</Stem_Color>
+            <Leaf_Color>Зелений</Leaf_Color>
+            <Average_Length>100.0</Average_Length>
+        </Visual_Parameters>
+        <Growing_Tips>
+            <Temperature>25.0</Temperature>
+            <Photophilous>true</Photophilous>
+            <Watering>20000.0</Watering>
+            <Growth_Time>160</Growth_Time>
+        </Growing_Tips>
+    </Flowers>
+
+</Flower>
