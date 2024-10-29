@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44882a83-0182-47cd-b19c-58f223726086" name="Changes" comment="Sorting flowers">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/XSLTTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/xml_files/transformation.xsl" afterDir="false" />
+    <list default="true" id="44882a83-0182-47cd-b19c-58f223726086" name="Changes" comment="XSLTTransformation class">
+      <change afterPath="$PROJECT_DIR$/src/test/java/generated/FlowerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/DOMFlowerParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SAXFlowerParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/StAXFlowerParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/XMLValidatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/XMLValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/XMLValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/parsers/SAXFlowerParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/parsers/SAXFlowerParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/parsers/StAXFlowerParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/parsers/StAXFlowerParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -50,35 +56,57 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.DOMFlowerParser.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SAXFlowerParser.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Programing/Java/Lab2_xml/src/main/java/org/example/xml_files&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Programing/Java/Lab2_xml/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.testRunning&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DOMFlowerParser.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.SAXFlowerParser.executor": "Run",
+    "Application.StAXFlowerParser.executor": "Run",
+    "JUnit.DOMFlowerParserTest.executor": "Run",
+    "JUnit.FlowerTest.executor": "Run",
+    "JUnit.SAXFlowerParserTest.executor": "Run",
+    "JUnit.StAXFlowerParserTest.executor": "Run",
+    "JUnit.StAXFlowerParserTest.testParseFlowers.executor": "Run",
+    "JUnit.XMLValidatorTest.executor": "Run",
+    "JUnit.XMLValidatorTest.validationXML.executor": "Run",
+    "JUnit.java in Lab2_xml.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Programing/Java/Lab2_xml/src/main/java/org/example/xml_files/flowers",
+    "onboarding.tips.debug.path": "D:/Programing/Java/Lab2_xml/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.testRunning"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: []
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": []
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programing\Java\Lab2_xml\src\main\java\org\example\xml_files\flowers" />
       <recent name="D:\Programing\Java\Lab2_xml\src\main\java\org\example\xml_files" />
       <recent name="D:\Programing\Java\Lab2_xml\src\main\xsd" />
       <recent name="D:\Programing\Java\Lab2_xml\src\main\resources\schema" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="generated" />
+      <recent name="org.example" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="DOMFlowerParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.parsers.DOMFlowerParser" />
+  <component name="RunManager" selected="JUnit.java in Lab2_xml">
+    <configuration name="StAXFlowerParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.parsers.StAXFlowerParser" />
       <module name="Lab2_xml" />
       <extension name="coverage">
         <pattern>
@@ -90,37 +118,67 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+    <configuration name="SAXFlowerParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lab2_xml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.parsers.*" />
+          <option name="PATTERN" value="org.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.SAXFlowerParserTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SAXFlowerParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.parsers.SAXFlowerParser" />
+    <configuration name="StAXFlowerParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lab2_xml" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.parsers.*" />
+          <option name="PATTERN" value="org.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.StAXFlowerParserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StAXFlowerParserTest.testParseFlowers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab2_xml" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.StAXFlowerParserTest" />
+      <option name="METHOD_NAME" value="testParseFlowers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="java in Lab2_xml" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lab2_xml" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.DOMFlowerParser" />
-        <item itemvalue="Application.SAXFlowerParser" />
+        <item itemvalue="JUnit.java in Lab2_xml" />
+        <item itemvalue="Application.StAXFlowerParser" />
+        <item itemvalue="JUnit.StAXFlowerParserTest.testParseFlowers" />
+        <item itemvalue="JUnit.StAXFlowerParserTest" />
+        <item itemvalue="JUnit.SAXFlowerParserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730037866788</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="XSLTTransformation class">
+      <option name="closed" value="true" />
+      <created>1730049923814</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1730049923814</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -243,6 +309,7 @@
     <MESSAGE value="DOMFlowerParser class" />
     <MESSAGE value="StAXFlowerParser class, extended documentation" />
     <MESSAGE value="Sorting flowers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sorting flowers" />
+    <MESSAGE value="XSLTTransformation class" />
+    <option name="LAST_COMMIT_MESSAGE" value="XSLTTransformation class" />
   </component>
 </project>

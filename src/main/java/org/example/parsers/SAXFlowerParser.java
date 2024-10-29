@@ -101,7 +101,7 @@ public class SAXFlowerParser extends DefaultHandler {
     }
 
     // Parses an XML file that is validated by the greenhouse.xsd schema
-    public static List<Flower> parseFile(String fileName) {
+    public static List<Flower> parseFlowers(String fileName) {
         try {
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();
@@ -120,7 +120,7 @@ public class SAXFlowerParser extends DefaultHandler {
         List<Flower> flowers = new ArrayList<>();
         try (DirectoryStream<Path> stream = Files.newDirectoryStream(Path.of(directory), "*.xml")) {
             for (Path file : stream) {
-                flowers.addAll(Objects.requireNonNull(parseFile(file.toString())));
+                flowers.addAll(Objects.requireNonNull(parseFlowers(file.toString())));
             }
         } catch (IOException e) {
             String exMess = e.toString();

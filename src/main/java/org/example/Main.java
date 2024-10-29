@@ -14,7 +14,7 @@ public class Main {
         boolean is_valid = XMLValidator.validationXML(xmlDocument,xmlSchema);
         System.out.println(is_valid);
         if(is_valid){
-            List<Flower> flowers = SAXFlowerParser.parseFile(xmlDocument);
+            List<Flower> flowers = SAXFlowerParser.parseFlowers(xmlDocument);
             if(flowers == null)
                 return;
             for (Flower flower : flowers) {

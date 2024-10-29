@@ -49,7 +49,7 @@ public class StAXFlowerParser {
 
                     // Handle different start elements
                     switch (qName) {
-                        case "Flower":
+                        case "Flowers":
                             flower = new Flower();
                             Attribute idAttr = startElement.getAttributeByName(new QName("id"));
                             Attribute nameAttr = startElement.getAttributeByName(new QName("Name"));
@@ -101,7 +101,7 @@ public class StAXFlowerParser {
                     EndElement endElement = event.asEndElement();
 
                     // Handle end elements
-                    if (endElement.getName().getLocalPart().equals("Flower")) {
+                    if (endElement.getName().getLocalPart().equals("Flowers")) {
                         flowers.add(flower);
                     } else if (endElement.getName().getLocalPart().equals("Visual_Parameters")) {
                         Objects.requireNonNull(flower).setVisualParameters(visualParams);
